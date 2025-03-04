@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Question Bank</title>
+</head>
+<body>
+<h2>Question List</h2>
+
+<a href="/questions/showNewQuestionForm">Add New Question</a>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Question</th>
+       </tr>
+    </thead>
+    <tbody>
+        <tr th:each="question : ${listQuestions}">
+            <td th:text="${question.id}"></td>
+            <td th:text="${question.questionText}"></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
